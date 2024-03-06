@@ -8,6 +8,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/',(req,res)=>{
+    res.send('Connected to Server...');
+})
+
 app.post('/download',async(req,res)=>{
 
     try{
